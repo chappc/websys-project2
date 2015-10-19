@@ -1,3 +1,4 @@
 # websys-project2
 Color picker using html, javascript, and jquery
 test 1
+test 2 Samuel
