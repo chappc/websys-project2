@@ -1,9 +1,24 @@
-
-#slider {
-    margin: 10px;
+#hexxed{
+	color: gray;
+	box-sizing: border-box;
+    width: 500px;
+    margin: auto;
+    text-align: center;
 }
 
-.swatch {
+#hexxed-sliderRed {
+    background: #ff0000;
+}
+
+#hexxed-sliderGreen {
+    background: #00ff00;
+}
+
+#hexxed-sliderBlue {
+    background: #0000ff;
+}
+
+.hexxed-swatch {
     display: inline-block;
     height: 200px;
     width: 200px;
@@ -12,24 +27,31 @@
     box-shadow: 0px 0px 10px #888;
 }
 
+.hexxed-slider {
+    padding-left: 20px;
+    background-color: #eeeeee;
+    width: auto;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.hexxed-slider p, .hexxed-slider div {
+    display: inline-block;
+}
+
+.hexxed-slider p{
+    width: 3em;
+}
+
 .ui-slider-horizontal {
     height: 8px;
-    width: 200px;
+    width: 256px;
 }
 .ui-slider .ui-slider-handle {
     height: 15px;
     width: 5px;
     padding-left: 5px;
 }
-
-background{
-	color: gray;
-	box-sizing: border-box;
-    width: 50%;
-    float: left;
-}
-
-
 
 h1{
 	font-weight: bold;
