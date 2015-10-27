@@ -1,6 +1,20 @@
 $.fn.hexxed = function(settings)
 {
-
+    // make sure settings are defined
+    if( settings === undefined )
+    {
+        settings = {difficulty: 5, max_turns: 5};
+    }
+    if ( settings.difficulty === undefined )
+    {
+        settings.difficulty = 5;
+    }
+    if ( settings.max_turns === undefined )
+    {
+        settings.max_turns = 5;
+    }
+    
+    // Set up the structure of the game
     this.html(" \
         <h1>Hexxed</h1> \
         <h2>Guess the Color!</h2> \
@@ -29,18 +43,19 @@ $.fn.hexxed = function(settings)
         <div id=\"hexxed-next\"> \
             <button type=\"button\">Next</button> \
         </div> \
-        <p>Your damn errors: <span id=\"hexxed-percent_error\"></span></div> \
+        <p>Your errors: <span id=\"hexxed-percent_error\"></span></div> \
     ");
+
 
     var turns = 0;
 
     // Initial color for the match swatch;
-    var color;
-    var randcolor;
+    var color = [255,255,255];
+    var randcolor = "#000000";
     
     var color_error= 0;
     
-    var start_time;
+    var start_time=0;
     
     var end_time=0;
 
@@ -185,10 +200,12 @@ $.fn.hexxed = function(settings)
             $("#hexxed-next").click(finish);
         }
         start_time = m.getTime();
-    }
     
+    }
+
     $("document").ready(function()
     {
+
         reset();
     });
     return this;
