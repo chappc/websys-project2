@@ -18,6 +18,10 @@
     background: #0000ff;
 }
 
+#hexxed-next {
+    padding-top: 5px;
+}
+
 .hexxed-swatch {
     display: inline-block;
     height: 200px;
